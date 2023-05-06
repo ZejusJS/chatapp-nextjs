@@ -84,7 +84,9 @@ app.use(cors({
 app.use(cookieParser(process.env.SECRET))
 app.use(bodyparser.json())
 
-
+app.get('/', catchAsync(async function (req, res, next) {
+    res.json({ msg: 'HEY' })
+}))
 
 app.use(async (err: { message?: any; status?: any; }, req: Request, res: Response, next: any) => {
     // console.log(err)

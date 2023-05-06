@@ -1,3 +1,21 @@
+:root {
+    --text: #000;
+    --bg: #fff;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #fff;
+        --bg: #000;
+    }
+}
+
 h1 {
     color: red;
 }
