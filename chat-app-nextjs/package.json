@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.2.32",
     "@svgr/webpack": "^7.0.0",
     "@tanstack/query-sync-storage-persister": "^4.29.5",
     "@tanstack/react-query": "^4.29.5",
@@ -17,27 +18,37 @@
     "@types/node": "20.1.0",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "accept-language": "^3.0.18",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
     "client-only": "^0.0.1",
     "cookie": "^0.5.0",
     "cookie-cutter": "^0.2.0",
     "cookies-next": "^2.1.1",
+    "detect-browser-language": "^0.0.2",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.1",
+    "i18next": "^22.4.15",
+    "i18next-resources-to-backend": "^1.1.3",
     "mongoose": "^7.1.0",
+    "negotiator": "^0.6.3",
     "next": "13.4.1",
     "next-images": "^1.8.5",
+    "ni18n": "^1.1.0",
     "nprogress": "^0.2.0",
     "react": "18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "18.2.0",
     "react-google-recaptcha": "^2.1.0",
+    "react-i18next": "^12.2.2",
     "react-router-dom": "^6.11.1",
     "reaptcha": "^1.12.1",
     "sass": "^1.62.1",
     "server-only": "^0.0.1",
     "socket.io-client": "^4.6.1",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@types/negotiator": "^0.6.1"
   }
 }

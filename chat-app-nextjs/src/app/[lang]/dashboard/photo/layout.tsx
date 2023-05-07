@@ -7,7 +7,7 @@ const layout = ({
 }) => {
     return (
         <>
-            <div>{modal}</div>
+            <div>{children}</div>
         </>
     )
 }

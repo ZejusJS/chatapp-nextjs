@@ -7,6 +7,8 @@ const error = ({
     error: Error;
     reset: () => void;
 }) => {
+    console.log(error)
+    
     return (
         <main>
             <h2>ERRRORRR!!!</h2>
