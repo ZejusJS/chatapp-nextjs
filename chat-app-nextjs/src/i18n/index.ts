@@ -7,7 +7,7 @@ const initI18next = async (lng: any, ns: any) => {
   const i18nInstance = createInstance()
   await i18nInstance
     .use(initReactI18next)
-    .use(resourcesToBackend((language: any, namespace: any) => import(`./dictionaries/${language}/${namespace}.json`)))
+    .use(resourcesToBackend((language: any, namespace: any) => import(`./locales/${language}/${namespace}.json`)))
     .init(getOptions(lng, ns))
   return i18nInstance
 }

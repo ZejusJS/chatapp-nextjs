@@ -34,6 +34,8 @@ import cryptoLib from "crypto";
 import fs from "fs";
 import axios from "axios";
 import Redis from "redis";
+import http from 'http'
+import { Server } from 'socket.io'
 
 import catchAsync from "./utils/catchasync";
 // const { cloudinary } = require('./cloudinary/index')
@@ -84,6 +86,15 @@ app.use(cors({
 app.use(cookieParser(process.env.SECRET))
 app.use(bodyparser.json())
 
+const server = http.createServer(app)
+
+const io = new Server(server, {
+    cors: {
+        origin: process.env.FRONTEND,
+        credentials: true
+    }
+})
+
 app.get('/', catchAsync(async function (req, res, next) {
     res.json({ msg: 'HEY' })
 }))
@@ -110,6 +121,6 @@ app.use(async (err: { message?: any; status?: any; }, req: Request, res: Respons
 });
 
 
-app.listen(port, () => {
+server.listen(port, () => {
     console.log('LISTENNING ON PORT:', port);
 });

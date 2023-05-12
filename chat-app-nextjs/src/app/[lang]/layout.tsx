@@ -4,7 +4,7 @@ import { Roboto } from 'next/font/google'
 import type { Metadata } from 'next';
 import { dir } from 'i18next'
 
-import Navbar from '@/components/Navbar';
+import Footer from '../../components/footer/Footer';
 import { useTranslation } from '@/i18n';
 import { languages } from '@/i18n/settings';
 
@@ -24,8 +24,10 @@ export default async function RootLayout({ children, params: { lang } }: { child
   return (
     <html lang={lang} dir={dir(lang)}>
       <body className={inter.className}>
-        <Navbar lang={lang} t={t} />
-        {children}
+        <main className='main-page-body'>
+          {children}
+        </main>
+        <Footer lang={lang} t={t} />
       </body>
     </html>
   )

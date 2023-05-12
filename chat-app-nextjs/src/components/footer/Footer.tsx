@@ -1,5 +1,5 @@
 import { Trans } from 'react-i18next/TransWithoutContext'
-import { languages } from '../i18n/settings'
+import { languages } from '../../i18n/settings'
 import Link from 'next/link'
 
 const Navbar = ({
@@ -10,12 +10,11 @@ const Navbar = ({
     t: any
 }) => {
     return (
-        <nav>
-            <h1>{t('headers.title')}</h1>
+        <footer>
             <Trans i18nKey="languageSwitcher" t={t}>
-                Switch from <strong>{ lang }</strong> to:{' '}
+                Switch from <strong>{lang}</strong> to:{' '}
             </Trans>
-            {languages.filter((l) => lang !== l).map((l, index) => {
+            {languages.filter((l: any) => lang !== l).map((l: any, index: any) => {
                 return (
                     <span key={l}>
                         {index > 0 && (' or ')}
@@ -25,7 +24,12 @@ const Navbar = ({
                     </span>
                 )
             })}
-        </nav>
+            {/* {languages.filter((l) => lang !== l).map((l, index) => {
+                return (
+                    <LangPush l={l} index={index} prevLang={lang} />
+                )
+            })} */}
+        </footer>
     )
 }
 

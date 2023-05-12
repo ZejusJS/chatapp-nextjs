@@ -8,10 +8,10 @@ import { getOptions } from './settings'
 // 
 i18next
     .use(initReactI18next)
-    .use(resourcesToBackend((language: any, namespace: any) => import(`./dictionaries/${language}/${namespace}.json`)))
+    .use(resourcesToBackend((language: any, namespace: any) => import(`./locales/${language}/${namespace}.json`)))
     .init(getOptions())
 
-export function useTranslation(lng: any, ns?: any, options?: any) {
+export function useTranslation(lng: any, ns?: any, options?: any): any {
     if (i18next.resolvedLanguage !== lng) i18next.changeLanguage(lng)
     return useTranslationOrg<any>(ns, options)
 }

@@ -6,12 +6,6 @@ export default async function Home({ params: { lang } }: { params: any }) {
 
   return (
     <>
-      <h1>hey</h1>
-      <Link
-        href={'/dashboard'}
-      >
-        {t('headers.dashboard')}
-      </Link>
     </>
   )
 }

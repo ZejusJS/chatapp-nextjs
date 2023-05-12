@@ -1,0 +1,17 @@
+:root {
+    --text: #fff;
+    --bg: #000;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+body {
+    min-height: 100dvh;
+}
+
+.main-layout {
+    min-height: 100dvh;
+}

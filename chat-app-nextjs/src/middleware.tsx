@@ -19,8 +19,10 @@ export async function middleware(req: NextRequest) {
     )
 
     if (pathnameIsMissingLocale) {
+        const nextUrl = new NextURL(req.url)
+        nextUrl.pathname = `/${lang}${pathname}`
         return NextResponse.redirect(
-            new NextURL(`/${lang}${pathname}`, req.url)
+            nextUrl
         )
     }
 
